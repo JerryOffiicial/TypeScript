@@ -1,0 +1,2 @@
+npm install -g typescript // no need to dow all the time
+tsc --init //tsconfig.json
