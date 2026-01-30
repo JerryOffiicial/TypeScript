@@ -1,19 +1,21 @@
-var id = 5;
-var company = "Acne Corp";
-var isPublished = true;
-var ids = [1, 2, 3, 4, 5];
-var x = "pedro";
-var xArr = ["pedro", 0, true];
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+let id = 5;
+let company = "Acne Corp";
+let isPublished = true;
+let ids = [1, 2, 3, 4, 5];
+let x = "pedro";
+let xArr = ["pedro", 0, true];
 //2nd
-var concatenateValues = function (a, b) {
+const concatenateValues = (a, b) => {
     return a + b;
 };
 console.log(concatenateValues("Hello", "world"));
 console.log(concatenateValues("5", "10"));
-var User = {
+const User = {
     id: 1,
     name: "Jerry",
-    greet: function (message) {
+    greet(message) {
         console.log(message);
     }
 };
@@ -24,3 +26,4 @@ else {
     console.log(User.age);
 }
 User.greet("Hello");
+//# sourceMappingURL=tutorial.js.map
