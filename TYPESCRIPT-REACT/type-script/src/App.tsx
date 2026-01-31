@@ -1,5 +1,6 @@
 import React from 'react'
-import { Person } from './Person'
+import { User } from './Person'
+import { UserProvider } from './UserContextProvider'
 
 
 const name: string = "Jerry"
@@ -9,6 +10,7 @@ const isMarried: boolean = false
 const ages: number[] = [1, 2, 3, 4, 5]
 const person: any = 3;
 
+console.log(name, age, isMarried, ages, person)
 
 const App = () => {
 
@@ -16,12 +18,12 @@ const App = () => {
     name: "Jerry", age: 22, isMarried: false
   })
   const userFetched = fetchUser();
-  
+
   return (
-    <>
-      <Person name={userFetched.name} age={userFetched.age} isMarried={userFetched.isMarried} />
-      <Person name={"Suda"} age={22} isMarried={true} />
-    </>
+    <UserProvider>
+      <User name={userFetched.name} age={userFetched.age} isMarried={userFetched.isMarried} />
+      <User name={"Suda"} age={22} isMarried={true} />
+    </UserProvider>
   )
 }
 
