@@ -1,5 +1,5 @@
 import React from 'react'
-import { User } from './Person'
+import { Countries, User } from './Person'
 import { UserProvider } from './UserContextProvider'
 
 
@@ -21,8 +21,8 @@ const App = () => {
 
   return (
     <UserProvider>
-      <User name={userFetched.name} age={userFetched.age} isMarried={userFetched.isMarried} />
-      <User name={"Suda"} age={22} isMarried={true} />
+      <User name={userFetched.name} age={userFetched.age} isMarried={userFetched.isMarried} country={Countries.India} />
+      <User name={"Suda"} age={22} isMarried={true} country={Countries.UnitedStates} />
     </UserProvider>
   )
 }

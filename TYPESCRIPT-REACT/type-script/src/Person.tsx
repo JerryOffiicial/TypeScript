@@ -5,6 +5,14 @@ interface Props {
     name: string;
     age: number;
     isMarried: boolean;
+    country: Countries;
+}
+
+export enum Countries {
+    Brazil = "Brazil",
+    France = "France",
+    India = "India",
+    UnitedStates = "United States",
 }
 
 export const User = (props: Props) => {
@@ -27,7 +35,9 @@ export const User = (props: Props) => {
     //     event.preventDefault();
     // }
 
-    const { users, addUser, updateUser } = useContext(UserContext)
+    // 3
+    // const { users, addUser, updateUser } = useContext(UserContext)
+
     return (
         <div>
             {/* 1 */}
@@ -36,6 +46,7 @@ export const User = (props: Props) => {
                     <p>Name: {props.name}</p>
                     <p>Age: {props.age}</p>
                     <p>This person {props.isMarried ? "is married" : "is single"}</p>
+                    <p>Country of Origin: {props.country}</p>
                 </>
             )}
 
