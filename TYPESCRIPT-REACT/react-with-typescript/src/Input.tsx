@@ -1,13 +1,17 @@
-import React, { type FC } from 'react'
+import React from 'react'
 
 interface InputProps {
     input: number
     setInput: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const Input: FC<InputProps> = ({ input, setInput }) => {
+const Input = ({ input, setInput }: InputProps) => {
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setInput(Number(e.target.value))
+    }
     return (
-        <input value={input} type="text" onChange={(e) => setInput(Number(e.target.value))} />
+        <input value={input} type="text" onChange={handleChange} />
 
     )
 }
