@@ -1,6 +1,8 @@
 import { useState } from "react"
 import Input from "./Input"
 import Test from "./components/Test"
+import Button from "./components/Button"
+import UseReducer from "./components/UseReducer"
 
 const App = () => {
   const [first, setfirst] = useState<number>(0)
@@ -41,6 +43,11 @@ const App = () => {
           return <li key={entry.id}>{entry.value}</li>
         })}
       </ul>
+      <hr />
+
+      <Button title={"disabled button"} disabled={false}/> 
+      <hr />
+      <UseReducer/>
     </div>
   )
 }
